@@ -15,8 +15,9 @@
         <link href="css/weather.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <weather:Current city="SaoPaulo"/>
-        <weather:Current city="London" unit="imperial" />
-        <weather:Current city="Paris" unit="kelvin" />
+        <!-- Fill with your APP ID from openweatherapi.org-->
+        <weather:Current city="SaoPaulo" appid=""/>
+        <weather:Current city="London" unit="imperial" appid=""/>
+        <weather:Current city="Paris" unit="kelvin" appid=""/>
     </body>
 </html>

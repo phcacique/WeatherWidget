@@ -31,8 +31,13 @@ public class WeatherTag extends SimpleTagSupport {
         this.unit = unit;
     }
     
+    private String appid;
+    public void setAppid(String appid) {
+        this.appid = appid;
+    }
+    
+    
     private StringWriter sw = new StringWriter();
-    public static final String APPID = "a05eaeea0a6bb51bf8c2809c80805631";
     
     @Override
     public void doTag() throws JspException, IOException {
@@ -45,8 +50,8 @@ public class WeatherTag extends SimpleTagSupport {
             
             XMLParser xmlm = new XMLParser();
             String mode = "xml";
-            xmlm.openURL("http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+APPID+"&mode="+mode+"&units="+unit);
-            System.out.println("http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+APPID+"&mode="+mode+"&units="+unit);
+            xmlm.openURL("http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+appid+"&mode="+mode+"&units="+unit);
+            System.out.println("http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+appid+"&mode="+mode+"&units="+unit);
 
             Element raiz = xmlm.getDoc().getDocumentElement();
             CurrentWeather cw = xmlm.parseWeather(raiz);

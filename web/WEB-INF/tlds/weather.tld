@@ -8,6 +8,10 @@
     <tag-class>com.br.lp3.taglibs.WeatherTag</tag-class>
     <body-content>scriptless</body-content>
     <attribute>
+       <name>appid</name>
+       <required>true</required>
+    </attribute>
+    <attribute>
        <name>city</name>
        <required>true</required>
     </attribute>
