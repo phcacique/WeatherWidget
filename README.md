@@ -3,6 +3,8 @@
 <p>This is a project made for teaching about Web Services and custom Taglibs in java.
 We're using the OpenWeatherAPI for lookup the current weather for a location. It uses XML for represent the current weather, and we use JAXP for parsing. Then, we made a custom taglib to include it on JSP files.</p>
 
+<p><img alt="screenshot" src="https://s-media-cache-ak0.pinimg.com/564x/f3/a1/73/f3a1733dc4fe52cd0154b8203e2266b2.jpg"/></p>
+
 <h3>Using</h3>
 <p>To use the taglib, include the prefix ont he JSP:</p>
 <p><code><%@taglib prefix="weather" uri="/WEB-INF/tlds/weather.tld" %></code></p>
