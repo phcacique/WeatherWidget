@@ -1,0 +1,61 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 18, 2016, 2:45:41 PM
+    Author     : cacique
+*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,700);
+html{
+    background-color: #C8DAE6;
+    font-family: 'Roboto', sans-serif;
+}
+
+.weather_widget{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    background-color: #fff;
+    display:flex;
+    flex-flow: column wrap;
+    align-items: flex-end;
+    padding: 10px;
+    position:relative;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+    margin: 20px;
+    float:left;
+}
+
+.weather_widget img{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top:-5px;
+    right:-5px;
+}
+
+.weather_widget .city{
+    font-size: 0.8em;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 100;
+}
+
+.weather_widget .temperature{
+    font-weight: bold;
+    position:absolute;
+    top:25px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.weather_widget .unit{
+    font-size: 0.8em;
+}
