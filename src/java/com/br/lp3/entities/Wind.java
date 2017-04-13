@@ -15,7 +15,7 @@ public class Wind implements Serializable{
     private double speed;
     private String speedName;
     private String gusts;
-    private int direction;
+    private double direction;
     private String directionCode;
     private String directionName;
 
@@ -47,11 +47,11 @@ public class Wind implements Serializable{
         this.gusts = gusts;
     }
 
-    public int getDirection() {
+    public double getDirection() {
         return direction;
     }
 
-    public void setDirection(int direction) {
+    public void setDirection(double direction) {
         this.direction = direction;
     }
 

@@ -57,9 +57,9 @@ public class XMLParser {
             URL url = new URL(uri);
 
             //Conexão HTTP
-            //Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("172.16.0.10", 3128));
-            //HttpURLConnection conn = (HttpURLConnection) url.openConnection(proxy);
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("172.16.0.10", 3128));
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection(proxy);
+//            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
             int code = conn.getResponseCode();
 
@@ -163,7 +163,7 @@ public class XMLParser {
         String speedname = speedElement.getAttribute("name");
         String gusts = windElement.getElementsByTagName("gusts").item(0).getTextContent();
         Element directionElement = (Element) windElement.getElementsByTagName("direction").item(0);
-        int direction = Integer.parseInt(directionElement.getAttribute("value"));
+        double direction = Double.parseDouble(directionElement.getAttribute("value"));
         String directionCode = directionElement.getAttribute("code");
         String directionName = directionElement.getAttribute("name");
         Wind wind = new Wind();
